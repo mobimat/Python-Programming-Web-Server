@@ -62,7 +62,7 @@ def webServer(port=13331):
       outputdata = "HTTP/1.1 404 Not Found\r\n"
       outputdata += "Content-Type: text/html; charset=UTF-8\r\n"
       outputdata += "Server: mm7655"
-      outputdata += "\r\n\r\n"
+      outputdata += "Connection: close\r\n\r\n"
       outputdata += "<html><body><h1>404 Not Found</h1></body></html>"
       
       connectionSocket.send(outputdata.encode())
