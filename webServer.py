@@ -38,7 +38,7 @@ def webServer(port=13331):
       outputdata += "Content-Type: text/html; charset=UTF-8\r\n"
       outputdata += "Server: mm7655\r\n"
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
-      outputdata += "\r\n\r\n"
+      outputdata += "Connection: close\r\n\r\n"
       outputdata = outputdata.encode()
       #Fill in end
                
